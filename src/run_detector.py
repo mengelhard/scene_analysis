@@ -30,8 +30,10 @@ import pandas as pd
 
 # DEFINE DETECTOR
 
-MODULE_HANDLE = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1"
-DETECTOR = hub.load(MODULE_HANDLE).signatures['default']
+#MODULE_HANDLE = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1"
+MODULE_PATH = '/Users/mme/data/tf_models/faster_rcnn_openimages_v4_inception_resnet_v2_1'
+DETECTOR = hub.load(MODULE_PATH).signatures['default']
+#print(hub.resolve(MODULE_HANDLE))
 
 
 def listdir_by_ext(d, valid_ext=None, subdirs=True):
